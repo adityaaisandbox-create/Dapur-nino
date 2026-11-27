@@ -56,35 +56,37 @@ const Pagination = ({
           </select>
         </div>
       )}
-      <button
-        disabled={currentPage === 1}
-        onClick={() => onPageChange(currentPage - 1)}
-        className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-300"
-      >
-        Prev
-      </button>
-      <div className="flex items-center gap-2 text-sm">
-        {pages.map((page) => (
-          <button
-            key={page}
-            onClick={() => onPageChange(page)}
-            className={`px-2 rounded-sm ${
-              page === currentPage
-                ? "bg-lamaSky text-white"
-                : "bg-slate-100 hover:bg-slate-200"
-            }`}
-          >
-            {page}
-          </button>
-        ))}
+      <div className="flex items-center gap-2">
+        <button
+          disabled={currentPage === 1}
+          onClick={() => onPageChange(currentPage - 1)}
+          className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-300"
+        >
+          Prev
+        </button>
+        <div className="flex items-center gap-2 text-sm">
+          {pages.map((page) => (
+            <button
+              key={page}
+              onClick={() => onPageChange(page)}
+              className={`px-2 rounded-sm ${
+                page === currentPage
+                  ? "bg-lamaSky text-white"
+                  : "bg-slate-100 hover:bg-slate-200"
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
+        <button
+          disabled={currentPage === totalPages}
+          onClick={() => onPageChange(currentPage + 1)}
+          className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-300"
+        >
+          Next
+        </button>
       </div>
-      <button
-        disabled={currentPage === totalPages}
-        onClick={() => onPageChange(currentPage + 1)}
-        className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-300"
-      >
-        Next
-      </button>
     </div>
   );
 };

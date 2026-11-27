@@ -4,6 +4,7 @@ import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
+import DateRangePicker from "@/components/DateRangePicker";
 import { role, penjualanData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -130,31 +131,14 @@ const PenjualanListPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-2 self-end">
-            <label className="text-xs text-gray-500">Dari</label>
-            <input
-              type="date"
-              value={startDate}
-              onChange={(e) => setStartDate(e.target.value)}
-              className="border border-gray-300 rounded px-2 py-1 text-sm w-40"
+            <DateRangePicker
+              startDate={startDate}
+              endDate={endDate}
+              onChange={(start, end) => {
+                setStartDate(start);
+                setEndDate(end);
+              }}
             />
-            <label className="text-xs text-gray-500">Sampai</label>
-            <input
-              type="date"
-              value={endDate}
-              onChange={(e) => setEndDate(e.target.value)}
-              className="border border-gray-300 rounded px-2 py-1 text-sm w-40"
-            />
-            {(startDate || endDate) && (
-              <button
-                onClick={() => {
-                  setStartDate("");
-                  setEndDate("");
-                }}
-                className="text-xs text-red-600 hover:underline"
-              >
-                Reset
-              </button>
-            )}
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <Image src="/filter.png" alt="" width={14} height={14} />
             </button>
