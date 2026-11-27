@@ -92,7 +92,10 @@ const PenjualanListPage = () => {
             </button>
           </Link>
           {role === "admin" && (
-            <FormModal table="penjualan" type="delete" id={item.id} />
+            <>
+              <FormModal table="penjualan" type="update" data={item} />
+              <FormModal table="penjualan" type="delete" id={item.id} />
+            </>
           )}
         </div>
       </td>
