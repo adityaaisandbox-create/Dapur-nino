@@ -20,7 +20,7 @@ type Penjualan = {
   products: string[];
   categories: string[];
   address: string;
-  kemasan: string[];
+  consumable: string[];
   total: number;
 };
 
@@ -40,8 +40,8 @@ const columns = [
     className: "hidden md:table-cell",
   },
   {
-    header: "Kemasan",
-    accessor: "kemasan",
+    header: "Consumable",
+    accessor: "consumable",
     className: "hidden lg:table-cell",
   },
   {
@@ -81,7 +81,7 @@ const PenjualanListPage = () => {
       </td>
       <td className="hidden md:table-cell">{item.invoiceId}</td>
       <td className="hidden md:table-cell">{item.products.join(", ")}</td>
-      <td className="hidden lg:table-cell">{item.kemasan.join(", ")}</td>
+      <td className="hidden lg:table-cell">{item.consumable.join(", ")}</td>
       <td className="hidden lg:table-cell">{item.phone}</td>
       <td className="hidden lg:table-cell">Rp {item.total.toLocaleString()}</td>
       <td>
