@@ -73,7 +73,7 @@ const DateRangePicker = ({
   };
 
   const applyRange = () => {
-    if (tempStart && tempEnd) {
+    if (tempStart) {
       onChange(tempStart, tempEnd);
     }
     setIsOpen(false);
@@ -101,7 +101,7 @@ const DateRangePicker = ({
   const displayValue = startDate && endDate
     ? `${formatDisplay(startDate)} - ${formatDisplay(endDate)}`
     : startDate
-    ? `${formatDisplay(startDate)} - ...`
+    ? `${formatDisplay(startDate)}`
     : placeholder;
 
   return (
@@ -181,7 +181,7 @@ const DateRangePicker = ({
           </div>
 
           <div className="flex items-center justify-end gap-2 mt-3 pt-3 border-t">
-            {(startDate || endDate) && (
+            {(tempStart || tempEnd) && (
               <button
                 type="button"
                 onClick={clearRange}
@@ -200,7 +200,7 @@ const DateRangePicker = ({
             <button
               type="button"
               onClick={applyRange}
-              disabled={!tempStart || !tempEnd}
+              disabled={!tempStart}
               className="px-3 py-1.5 text-xs bg-lamaPurple text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-lamaPurple/90"
             >
               Terapkan
