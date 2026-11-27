@@ -41,7 +41,8 @@ const FormModal = ({
     | "result"
     | "attendance"
     | "event"
-    | "announcement";
+    | "announcement"
+    | "penjualan";
   type: "create" | "update" | "delete";
   data?: any;
   id?: number;

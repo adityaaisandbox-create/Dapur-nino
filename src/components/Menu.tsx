@@ -14,8 +14,8 @@ const menuItems = [
       },
       {
         icon: "/teacher.png",
-        label: "Teachers",
-        href: "/list/teachers",
+        label: "Penjualan",
+        href: "/list/penjualan",
         visible: ["admin", "teacher"],
       },
       {
