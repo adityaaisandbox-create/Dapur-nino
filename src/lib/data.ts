@@ -926,7 +926,7 @@ export const penjualanData = [
     products: ["Nasi tim (2)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Nasi tim"],
+    consumable: ["Rice cup (2)"],
     total: 20000,
   },
   {
