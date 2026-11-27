@@ -128,7 +128,7 @@ const DateRangePicker = ({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 z-50 bg-white border border-gray-300 rounded-lg shadow-lg p-3 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div className="absolute top-full right-0 mt-1 z-50 bg-white border border-gray-300 rounded-lg shadow-lg p-3 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <div className="flex items-center justify-between mb-3">
             <button onClick={prevMonth} className="p-1 rounded hover:bg-gray-100" aria-label="Bulan sebelumnya">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-600">
