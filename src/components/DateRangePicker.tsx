@@ -116,7 +116,7 @@ const DateRangePicker = ({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full md:w-72 lg:w-80 px-3 py-2 text-left border border-gray-300 rounded bg-white text-sm text-gray-700 placeholder:text-gray-400 hover:border-lamaPurple focus:outline-none focus:ring-2 focus:ring-lamaPurple/50 flex items-center justify-between gap-2"
+        className="w-full md:w-64 px-3 py-2 text-left border border-gray-300 rounded bg-white text-sm text-gray-700 placeholder:text-gray-400 hover:border-lamaPurple focus:outline-none focus:ring-2 focus:ring-lamaPurple/50 flex items-center justify-between gap-2"
       >
         <span>{displayValue}</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-60 text-gray-600">
