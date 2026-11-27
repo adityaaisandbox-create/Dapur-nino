@@ -926,7 +926,7 @@ export const penjualanData = [
     products: ["Nasi tim (2)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box", "Tas"],
+    consumable: ["Nasi tim"],
     total: 20000,
   },
   {
@@ -939,7 +939,7 @@ export const penjualanData = [
     products: ["Donat gula (6)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box"],
+    consumable: ["Donat gula"],
     total: 18000,
   },
   {
@@ -952,7 +952,7 @@ export const penjualanData = [
     products: ["Nasi tim (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box"],
+    consumable: ["Nasi tim"],
     total: 10000,
   },
   {
@@ -965,7 +965,7 @@ export const penjualanData = [
     products: ["Donat gula (2)", "Dimsum (3)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box", "Plastik"],
+    consumable: ["Donat gula", "Dimsum"],
     total: 16000,
   },
   {
@@ -978,7 +978,7 @@ export const penjualanData = [
     products: ["Donat toping /6 pcs (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box"],
+    consumable: ["Donat toping /6 pcs"],
     total: 23000,
   },
   {
@@ -991,7 +991,7 @@ export const penjualanData = [
     products: ["Dimsum (3)", "Donat toping (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box", "Tas"],
+    consumable: ["Dimsum", "Donat toping"],
     total: 15000,
   },
   {
@@ -1004,7 +1004,7 @@ export const penjualanData = [
     products: ["Donat toping (3)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box"],
+    consumable: ["Donat toping"],
     total: 15000,
   },
   {
@@ -1017,7 +1017,7 @@ export const penjualanData = [
     products: ["Nasi tim (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box"],
+    consumable: ["Nasi tim"],
     total: 10000,
   },
   {
@@ -1030,7 +1030,7 @@ export const penjualanData = [
     products: ["Donat gula (5)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box", "Plastik"],
+    consumable: ["Donat gula"],
     total: 15000,
   },
   {
@@ -1043,7 +1043,7 @@ export const penjualanData = [
     products: ["Donat toping (2)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Box"],
+    consumable: ["Donat toping"],
     total: 10000,
   },
 ];
