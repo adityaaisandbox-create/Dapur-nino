@@ -4,10 +4,14 @@ const Pagination = ({
   currentPage = 1,
   totalPages = 1,
   onPageChange,
+  itemsPerPage,
+  onItemsPerPageChange,
 }: {
   currentPage?: number;
   totalPages?: number;
   onPageChange?: (page: number) => void;
+  itemsPerPage?: number;
+  onItemsPerPageChange?: (value: number) => void;
 }) => {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -35,7 +39,23 @@ const Pagination = ({
   }
 
   return (
-    <div className="p-4 flex items-center justify-between text-gray-500">
+    <div className="p-4 flex items-center justify-between text-gray-500 flex-wrap gap-2">
+      {itemsPerPage && onItemsPerPageChange && (
+        <div className="flex items-center gap-2 hidden sm:flex">
+          <label className="text-xs text-gray-500">Tampilkan</label>
+          <select
+            value={itemsPerPage}
+            onChange={(e) => onItemsPerPageChange(Number(e.target.value))}
+            className="border border-gray-300 rounded px-2 py-1 text-sm w-24"
+          >
+            <option value={5}>5</option>
+            <option value={10}>10</option>
+            <option value={25}>25</option>
+            <option value={50}>50</option>
+            <option value={100}>100</option>
+          </select>
+        </div>
+      )}
       <button
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
