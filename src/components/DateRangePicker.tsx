@@ -35,11 +35,18 @@ const DateRangePicker = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const formatDate = (date: Date) => date.toISOString().split("T")[0];
+  const formatDate = (date: Date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
   const formatDisplay = (dateStr: string) => {
     if (!dateStr) return "";
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("id-ID", { day: "2-digit", month: "short", year: "numeric" });
+    const [y, m, d] = dateStr.split("-").map(Number);
+    const date = new Date(y, m - 1, d);
+    return date.toLocaleDateString("id-ID", { day: "2-digit", month: "short", year: "numeric" });
   };
 
   const getDaysInMonth = (year: number, month: number) => {
@@ -121,7 +128,7 @@ const DateRangePicker = ({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 z-50 bg-white border border-gray-300 rounded-lg shadow-lg p-3 min-w-[560px]">
+        <div className="absolute top-full left-0 mt-1 z-50 bg-white border border-gray-300 rounded-lg shadow-lg p-3 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <div className="flex items-center justify-between mb-3">
             <button onClick={prevMonth} className="p-1 rounded hover:bg-gray-100" aria-label="Bulan sebelumnya">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-600">
@@ -136,7 +143,7 @@ const DateRangePicker = ({
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[-1, 0].map((offset) => {
               const m = viewMonth.month + offset;
               const y = viewMonth.year + Math.floor(m / 12);
@@ -146,7 +153,7 @@ const DateRangePicker = ({
               return (
                 <div key={offset} className="space-y-2">
                   <div className="text-xs font-medium text-gray-500 text-center">{label}</div>
-                  <div className="grid grid-cols-7 gap-1 text-center text-xs">
+                  <div className="grid grid-cols-7 gap-1 text-center text-xs sm:gap-1.5">
                     {["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"].map((d) => (
                       <div key={d} className="text-gray-400 font-medium py-1">{d}</div>
                     ))}
@@ -158,7 +165,7 @@ const DateRangePicker = ({
                           onClick={() => handleDayClick(date)}
                           onMouseEnter={() => setHoveredDate(formatDate(date))}
                           onMouseLeave={() => setHoveredDate(null)}
-                          className={`w-8 h-8 rounded mx-auto relative ${
+                          className={`w-7 h-7 sm:w-8 sm:h-8 rounded mx-auto relative ${
                             isInRange(date)
                               ? "bg-lamaPurpleLight text-lamaPurple"
                               : "hover:bg-gray-100"
@@ -171,7 +178,7 @@ const DateRangePicker = ({
                           {isEndDate(date) && <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[8px]">Sampai</span>}
                         </button>
                       ) : (
-                        <div key={i} className="w-8 h-8" />
+                        <div key={i} className="w-7 h-7 sm:w-8 sm:h-8" />
                       )
                     )}
                   </div>
