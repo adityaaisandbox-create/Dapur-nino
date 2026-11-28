@@ -20,7 +20,7 @@ const PenjualanForm = dynamic(() => import("./forms/PenjualanForm"), {
 });
 
 const forms: {
-  [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
+  [key: string]: (type: "create" | "update", data?: any, onSuccess?: () => void) => JSX.Element;
 } = {
   teacher: (type, data) => <TeacherForm type={type} data={data} />,
   student: (type, data) => <StudentForm type={type} data={data} />,
@@ -32,6 +32,7 @@ const FormModal = ({
   type,
   data,
   id,
+  onSuccess,
 }: {
   table:
     | "teacher"
@@ -50,6 +51,7 @@ const FormModal = ({
   type: "create" | "update" | "delete";
   data?: any;
   id?: number;
+  onSuccess?: () => void;
 }) => {
   const size = type === "create" ? "w-8 h-8" : "w-7 h-7";
   const bgColor =
@@ -72,7 +74,7 @@ const FormModal = ({
         </button>
       </form>
     ) : type === "create" || type === "update" ? (
-      forms[table](type, data)
+      forms[table](type, data, onSuccess)
     ) : (
       "Form not found!"
     );

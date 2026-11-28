@@ -926,7 +926,7 @@ export const penjualanData = [
     products: ["Nasi tim (2)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Rice cup (2)"],
+    consumable: ["Rice Cup (2)"],
     total: 20000,
   },
   {
@@ -939,7 +939,7 @@ export const penjualanData = [
     products: ["Donat gula (6)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Donat gula"],
+    consumable: ["Dus besar (1)"],
     total: 18000,
   },
   {
@@ -952,7 +952,7 @@ export const penjualanData = [
     products: ["Nasi tim (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Nasi tim"],
+    consumable: ["Rice Cup (1)"],
     total: 10000,
   },
   {
@@ -965,7 +965,7 @@ export const penjualanData = [
     products: ["Donat gula (2)", "Dimsum (3)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Donat gula", "Dimsum"],
+    consumable: ["Dus kecil (1)"],
     total: 16000,
   },
   {
@@ -978,7 +978,7 @@ export const penjualanData = [
     products: ["Donat toping /6 pcs (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Donat toping /6 pcs"],
+    consumable: ["Dus besar (1)"],
     total: 23000,
   },
   {
@@ -991,7 +991,7 @@ export const penjualanData = [
     products: ["Dimsum (3)", "Donat toping (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Dimsum", "Donat toping"],
+    consumable: ["Dus kecil (2)"],
     total: 15000,
   },
   {
@@ -1004,7 +1004,7 @@ export const penjualanData = [
     products: ["Donat toping (3)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Donat toping"],
+    consumable: ["Styrofoam (1)"],
     total: 15000,
   },
   {
@@ -1017,7 +1017,7 @@ export const penjualanData = [
     products: ["Nasi tim (1)"],
     categories: ["F&B"],
     address: "Gerai Nino (WIB)",
-    consumable: ["Nasi tim"],
+    consumable: ["Rice Cup (1)"],
     total: 10000,
   },
   {
